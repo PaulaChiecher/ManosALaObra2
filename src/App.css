@@ -1,0 +1,148 @@
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef3f2 0%, #e8f4fd 100%); /* Gradiente suave, tu toque */
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ec4899; /* Rosa lindo */
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280; /* Gris suave */
+  font-size: 1rem;
+}
+
+.form-agregar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-tarea {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #f3e8ff; /* Borde lila claro */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-tarea:focus {
+  outline: none;
+  border-color: #c084fc; /* Lila al focus */
+}
+
+.btn-agregar {
+  padding: 0.75rem 1.5rem;
+  background-color: #ec4899; /* Rosa botón */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #db2777; /* Rosa más oscuro */
+  transform: translateY(-1px);
+}
+
+.tareas-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tarea-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.tarea-item.completada {
+  opacity: 0.7;
+  background: #f3f4f6; /* Gris claro para completadas */
+}
+
+.label-tarea {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #ec4899; /* Rosa para checkbox */
+}
+
+.texto-tarea {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.tarea-item.completada .texto-tarea {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.btn-borrar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ef4444; /* Rojo suave */
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-borrar:hover {
+  color: #dc2626;
+  transform: scale(1.1);
+}
+
+.mensaje-vacio {
+  text-align: center;
+  padding: 2rem;
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Responsive para mobile */
+@media (max-width: 640px) {
+  .form-agregar {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
